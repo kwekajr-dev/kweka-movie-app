@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+// App.js (updated)
 import './App.css';
+import { Footer, Header } from './components';
+import AllRoutes from './routes/AllRoutes';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App dark:bg-gray-900 bg-gray-50 min-h-screen">
+      <Header/>
+      <AllRoutes/>
+      <ScrollToTop smooth />
+      <Footer/>
     </div>
   );
 }
