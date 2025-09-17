@@ -8,11 +8,10 @@ const MovieDetails = () => {
   const [pan, setPan] = useState({});
   const param = useParams();
 
-  // URL for fetching movie details
+  
   const url = `https://api.themoviedb.org/3/movie/${param.id}?api_key=${process.env.REACT_APP_KEY}&language=en-US`;
 
-  // Memoizing options to prevent unnecessary re-renders
- // Empty array means this memoization will only run once when the component mounts
+ 
 const [butdown, setButdown]=useState({url:"", download:false})
  
 
